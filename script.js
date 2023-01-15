@@ -15,6 +15,7 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
         console.log(json);
 
         if (json.cod === 200) {
+
             showInfo({
                 name: json.name,
                 county: json.sys.country,
@@ -35,6 +36,7 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
 
 function showInfo(json) {
     showWarning('');
+    document.querySelector('.aviso').style.display = 'none';
 
     document.querySelector('.resultado').style.display = 'block';
 
@@ -50,9 +52,11 @@ function showInfo(json) {
 
 function clearInfo() {
     showWarning('');
+    document.querySelector('.aviso').style.display = 'none';
     document.querySelector('.resultado').style.display = 'none';
 }
 
 function showWarning(msg) {
+    document.querySelector('.aviso').style.display = 'block';
     document.querySelector('.aviso').innerHTML = msg;
 }

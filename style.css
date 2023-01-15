@@ -1,3 +1,10 @@
+:root{
+    --darkred: #32051d;
+    --yellow: #d5c917;
+    --blue: #115173;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +17,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #1f2c2c;
+    background-color: var(--darkred);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    color: #dd24e1;
+    color: var(--yellow);
     margin: 20px 0;
 }
 
@@ -35,20 +42,20 @@ h1 {
     padding: 10px;
     font-size: 15px;
     border: 0;
-    background-color: #4b5f5f;
-    color: #3fe2de;
+    background-color: var(--blue);
+    color: var(--yellow);
     border-radius: 5px;
     margin-left: 10px;
     cursor: pointer;
 }
 .busca button:hover {
-    background-color: #3e4f4f;
+    background-color: #11517381;
 }
 
 .resultado {
     width: 300px;
     display: none;
-    border: 1px dotted #3fe2de;
+    border: 1px dotted var(--yellow);
     margin-top: 20px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.2);
@@ -56,7 +63,7 @@ h1 {
 
 .titulo {
     width: 100%;
-    color: #dd24e1;
+    color: var(--yellow);
     font-size: 25px;
     font-weight: bold;
     text-align: center;
@@ -78,13 +85,13 @@ h1 {
 .tempTitulo,
 .ventoTitulo,
 .weather_descricao {
-    color: #3fe2de;
+    color: var(--yellow);
     font-size: 16px;
     margin-bottom: 10px;
 }
 .tempInfo,
 .ventoInfo {
-    color: #3fe2de;
+    color: white;
     font-size: 30px;
     font-weight: bold;
 }
@@ -99,7 +106,7 @@ h1 {
 .ventoArea {
     width: 50px;
     height: 50px;
-    border: 1px solid #3fe2de;
+    border: 1px solid var(--blue);
     border-radius: 50%;
     margin: auto;
     margin-top: 20px;
@@ -109,12 +116,16 @@ h1 {
 .ventoPonto {
     width: 15px;
     height: 1px;
-    background-color: #dd24e1;
+    background-color: var(--yellow);
     transform-origin: left;
 }
 
 
 .aviso {
-    color: #dd24e1;
-    padding-top: 20px;
+    display: none;
+    background-color: #920f0f8e;
+    color: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
 }
